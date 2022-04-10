@@ -1,0 +1,18 @@
+<table class="table table-secondary shadow">
+  <thead>
+    <tr>
+      <th scope="col" *ngFor="let headerItem of headerRow">
+        <div class="d-flex">
+          {{ headerItem.displayName }}
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of tableData$ | async">
+      <td>{{ row.id }}</td>
+      <td>{{ row.name }}</td>
+      <td>{{ row.role }}</td>
+    </tr>
+  </tbody>
+</table>
